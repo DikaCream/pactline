@@ -6,7 +6,7 @@ It runs on [GenLayer](https://genlayer.com), so the verdict itself is consensus 
 
 ## Try it
 
-- App: https://dikacream.github.io/pactline/ (routes like `/#/deals/1`, `/#/new`, `/#/how`)
+- App: https://pactline-rouge.vercel.app (routes like `/#/deals/1`, `/#/new`, `/#/how`)
 - Escrow contract on StudioNet: `0xD5Efa2b53B8C60AcB1A742e42f2cb22AC68ff953`
 - Repo: https://github.com/DikaCream/pactline
 
@@ -77,7 +77,7 @@ gltest --network studionet tests/deploy_seed_pactline.py -v -s
 cd frontend && npm install && npm run dev
 ```
 
-Deployed to GitHub Pages from `.github/workflows/deploy.yml` on every push to `main` that touches `frontend/`.
+Deployed to Vercel (https://pactline-rouge.vercel.app). GitHub Pages mirrors the same build from `.github/workflows/deploy.yml` on every push to `main` that touches `frontend/`.
 
 ## Contract constants
 
