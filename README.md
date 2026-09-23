@@ -6,7 +6,7 @@ It runs on [GenLayer](https://genlayer.com), so the verdict itself is consensus 
 
 ## Try it
 
-- App: https://dikacream.github.io/pactline/
+- App: https://dikacream.github.io/pactline/ (routes like `/#/deals/1`, `/#/new`, `/#/how`)
 - Escrow contract on StudioNet: `0x2eC479597554a6cB6EAAB0AD146d6484c051D3D7`
 - Repo: https://github.com/DikaCream/pactline
 
