@@ -29,6 +29,10 @@ jobs:
         working-directory: frontend
       - run: npm run build
         working-directory: frontend
+      # GitHub Pages serves 404.html for unknown paths; make it the SPA shell
+      - name: SPA fallback for deep links
+        run: cp dist/index.html dist/404.html
+        working-directory: frontend
       - uses: actions/upload-pages-artifact@v3
         with:
           path: frontend/dist
