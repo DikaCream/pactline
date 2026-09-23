@@ -205,6 +205,12 @@ def test_seed():
     assert d4["status"] == "FAILED", f"deal 4 must fail, got {d4['status']}"
     print(f"deal {did4} FAILED: placeholder page, no bond, buyer can finalize")
 
+    # ---- deals 5 & 6: the appeal-upheld arc, plus one staged mid-appeal ----
+    from tests.seed_appeal_upheld import add_appeal_deals
+
+    print("adding the appeal-upheld arc (finished) and the staged appeal...")
+    add_appeal_deals(pact, buyer, seller)
+
     stats = pact.get_stats(args=[]).call()
     print(
         f"\nFINAL stats: deals={stats['deals']} settled={stats['settled_count']} "

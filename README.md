@@ -16,6 +16,8 @@ The seeded board carries every state at once:
 - **Deal 2 — DELIVERED.** A good page, review not run yet. Anyone can click **Run the review** in the app and watch validators fetch the page, agree, and move the money.
 - **Deal 3 — CREATED.** Funded and open. Any wallet can deliver against its terms.
 - **Deal 4 — FAILED.** A placeholder page failed review with no appeal bond, so the buyer can finalize the fee-free refund immediately.
+- **Deal 5 — REFUNDED via a upheld appeal.** The placeholder failed, the seller staked the 0.1 GEN bond, the re-review said FAIL again: the bond paid the buyer and the escrow refunded fee-free. On-chain accounting asserted: payouts rose by exactly bond + escrow.
+- **Deal 6 — APPEALED, staged for you.** The seller staked the bond and the placeholder is still up. Click **Run the re-review** and watch the verdict stay FAIL: the bond moves to the buyer live. If nobody clicks, anyone can finalize after the 3-day window and the bond goes back to the seller instead.
 
 ## How the machine works
 
@@ -61,7 +63,7 @@ gltest --network studionet tests/e2e_pact_line.py -v -s
 
 It deploys a fresh PactLine, walks a deal to consensus PASS (the seller is paid net of fee on-chain), then walks a second deal through FAIL, appeal, a fixed deliverable page, an overturned re-review, and settles, asserting the full accounting: 2 settles, 1 appeal overturned, bond returned, fees exact, escrow at zero.
 
-The board seed is `tests/deploy_seed_pactline.py` (same runner shape):
+The board seed is `tests/deploy_seed_pactline.py` (same runner shape); it appends the appeal-upheld arc and the staged appeal from `tests/seed_appeal_upheld.py`:
 
 ```bash
 gltest --network studionet tests/deploy_seed_pactline.py -v -s
