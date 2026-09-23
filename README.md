@@ -7,7 +7,7 @@ It runs on [GenLayer](https://genlayer.com), so the verdict itself is consensus 
 ## Try it
 
 - App: https://dikacream.github.io/pactline/ (routes like `/#/deals/1`, `/#/new`, `/#/how`)
-- Escrow contract on StudioNet: `0x2eC479597554a6cB6EAAB0AD146d6484c051D3D7`
+- Escrow contract on StudioNet: `0xD5Efa2b53B8C60AcB1A742e42f2cb22AC68ff953`
 - Repo: https://github.com/DikaCream/pactline
 
 The seeded board carries every state at once:

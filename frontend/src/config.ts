@@ -6,7 +6,7 @@ export const RPC_URL = (import.meta.env.VITE_RPC_URL as string) || "";
 /** Deployed PactLine escrow contract on GenLayer StudioNet. */
 export const CONTRACT_ADDRESS =
   (import.meta.env.VITE_CONTRACT_ADDRESS as string) ||
-  "0x2eC479597554a6cB6EAAB0AD146d6484c051D3D7";
+  "0xD5Efa2b53B8C60AcB1A742e42f2cb22AC68ff953";
 
 export const STUDIONET_CHAIN_ID = 777;
 export const STUDIONET_CHAIN_ID_HEX = "0x309";
